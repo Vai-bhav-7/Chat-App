@@ -48,6 +48,8 @@ app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
 
 //connect to mongodb
+console.log("MONGO_URI:", JSON.stringify(process.env.MONGO_URI));
+
 await connectDB();
 
 if(process.env.NODE_ENV !== "production") {
